@@ -42,8 +42,6 @@ func main() {
 		check(json.Unmarshal(csvOptionsString, &csvOptions))
 	}
 
-	var xmlCells [][]rb.Cell
-
 	body := bytes.TrimPrefix(dat, []byte("\xef\xbb\xbf"))
 	r := csv.NewReader(strings.NewReader(string(body)))
 	r.Comma = []rune(csvOptions.Comma)[0]
@@ -52,23 +50,9 @@ func main() {
 	records, err := r.ReadAll()
 	check(err)
 
-	for rowIndex, rows := range records {
-		var xmlRow []rb.Cell
-		for columnIndex, value := range rows {
-			if rowIndex < csvOptions.HeaderLines {
-				xmlRow = append(xmlRow, rb.MakeCell(value, "string"))
-			} else {
-				if csvOptions.Types != nil {
-					xmlRow = append(xmlRow, rb.MakeCell(value, csvOptions.Types[columnIndex]))
-				} else {
-					xmlRow = append(xmlRow, rb.MakeCell(value, "string"))
-				}
-			}
-		}
-		xmlCells = append(xmlCells, xmlRow)
-	}
+	cells := csvRecordsToOdtCells(records, csvOptions)
 
-	spreadsheet := rb.MakeSpreadsheet(xmlCells)
+	spreadsheet := rb.MakeSpreadsheet(cells)
 
 	if *flatPtr {
 		if strings.HasSuffix(*outputFilePtr, ".ods") {
@@ -86,4 +70,24 @@ func main() {
 		archive.Write(buff.Bytes())
 		archive.Close()
 	}
+}
+
+func csvRecordsToOdtCells(records [][]string, csvOptions CsvOptions) [][]rb.Cell {
+	var cells [][]rb.Cell
+	for rowIndex, rows := range records {
+		var xmlRow []rb.Cell
+		for columnIndex, value := range rows {
+			if rowIndex < csvOptions.HeaderLines {
+				xmlRow = append(xmlRow, rb.MakeCell(value, "string"))
+			} else {
+				if csvOptions.Types != nil {
+					xmlRow = append(xmlRow, rb.MakeCell(value, csvOptions.Types[columnIndex]))
+				} else {
+					xmlRow = append(xmlRow, rb.MakeCell(value, "string"))
+				}
+			}
+		}
+		cells = append(cells, xmlRow)
+	}
+	return cells
 }
