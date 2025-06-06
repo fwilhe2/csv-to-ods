@@ -11,12 +11,6 @@ import (
 	rb "github.com/fwilhe2/rechenbrett"
 )
 
-type Cell struct {
-	Value     string `json:"value"`
-	ValueType string `json:"type"`
-	Range     string `json:"range"`
-}
-
 func check(e error) {
 	if e != nil {
 		panic(e)

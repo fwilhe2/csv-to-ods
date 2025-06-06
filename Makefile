@@ -13,5 +13,13 @@ build:
 test:
 	go test -v ./...
 
+update:
+	go get -u
+	go mod tidy
+
+demo:
+	go run . -input sample.csv -flat
+
 clean:
-	rm -rf integration-test-*
+	rm *ods
+	rm *fods

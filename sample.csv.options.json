@@ -1,0 +1,10 @@
+{
+    "headerLines": 1,
+    "comma": ",",
+    "types": [
+        "string",
+        "float",
+        "float",
+        "currency"
+    ]
+}
