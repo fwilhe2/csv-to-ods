@@ -31,7 +31,10 @@ func main() {
 	flag.Parse()
 
 	dat, err := os.ReadFile(*inputFilePtr)
-	check(err)
+	if err != nil {
+		flag.Usage()
+		os.Exit(1)
+	}
 
 	var csvOptions CsvOptions
 
