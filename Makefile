@@ -13,6 +13,9 @@ build:
 test:
 	go test -v ./...
 
+install:
+	sudo install csv-to-ods /usr/local/bin
+
 update:
 	go get -u
 	go mod tidy
