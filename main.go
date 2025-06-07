@@ -30,7 +30,7 @@ func main() {
 
 	flag.Parse()
 
-	dat, err := os.ReadFile(*inputFilePtr)
+	csvInputString, err := os.ReadFile(*inputFilePtr)
 	if err != nil {
 		flag.Usage()
 		os.Exit(1)
@@ -45,12 +45,7 @@ func main() {
 		check(json.Unmarshal(csvOptionsString, &csvOptions))
 	}
 
-	body := bytes.TrimPrefix(dat, []byte("\xef\xbb\xbf"))
-	r := csv.NewReader(strings.NewReader(string(body)))
-	r.Comma = []rune(csvOptions.Comma)[0]
-	r.FieldsPerRecord = -1
-
-	records, err := r.ReadAll()
+	records, err := parseCsv(csvInputString, csvOptions)
 	check(err)
 
 	cells := csvRecordsToOdtCells(records, csvOptions)
@@ -73,6 +68,16 @@ func main() {
 		archive.Write(buff.Bytes())
 		archive.Close()
 	}
+}
+
+func parseCsv(csvInputString []byte, csvOptions CsvOptions) ([][]string, error) {
+	body := bytes.TrimPrefix(csvInputString, []byte("\xef\xbb\xbf"))
+	csvReader := csv.NewReader(strings.NewReader(string(body)))
+	csvReader.Comma = []rune(csvOptions.Comma)[0]
+	csvReader.FieldsPerRecord = -1
+
+	records, err := csvReader.ReadAll()
+	return records, err
 }
 
 func csvRecordsToOdtCells(records [][]string, csvOptions CsvOptions) [][]rb.Cell {
