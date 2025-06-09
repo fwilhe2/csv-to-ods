@@ -22,6 +22,7 @@ update:
 
 demo:
 	go run . -input sample.csv -flat
+	find samples -type f -name '*.csv' -exec go run . -input {} -flat -output {}.fods \;
 
 clean:
 	rm *ods
