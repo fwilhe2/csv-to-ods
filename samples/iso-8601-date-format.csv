@@ -1,0 +1,6 @@
+"Event ID","Event Name","Start Time (ISO 8601)","End Time (ISO 8601)","Location"
+101,"Team Meeting","2024-06-10T09:00:00Z","2024-06-10T10:30:00Z","Conference Room A"
+102,"Client Demo","2024-06-10T14:15:00Z","2024-06-10T15:00:00Z","Online"
+103,"Project Brainstorm","2024-06-11T11:00:00+02:00","2024-06-11T12:00:00+02:00","Creative Hub"
+104,"Lunch Break","2024-06-11T13:00:00Z","2024-06-11T13:45:00Z","Cafeteria"
+105,"Maintenance Window","2024-06-12T00:00:00Z","2024-06-12T03:00:00Z","Server Room"

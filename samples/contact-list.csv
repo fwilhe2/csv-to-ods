@@ -1,0 +1,7 @@
+"First Name","Last Name","Email","Phone","Address","Notes"
+"John","Doe","john.doe@email.com","+1 (555) 123-4567","123 Main St, Anytown","Regular customer"
+"Jane","Smith","jane.smith@email.com","","456 Oak Ave, Somewhere","Prefers email communication"
+"Peter","Jones","peter.j@email.com","(555) 987-6543","789 Pine Ln, Nowhere","Handles 'Urgent' issues."
+"Mary","Johnson",,"+1 800-CALL-NOW","",""
+"Robert","Brown","robert.b@email.com","555-1111","101 Elm Blvd","VIP; always pays on time."
+"Alice",,"alice.example@email.com","","","Missing last name"

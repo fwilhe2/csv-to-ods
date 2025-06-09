@@ -73,7 +73,9 @@ func main() {
 func parseCsv(csvInputString []byte, csvOptions CsvOptions) ([][]string, error) {
 	body := bytes.TrimPrefix(csvInputString, []byte("\xef\xbb\xbf"))
 	csvReader := csv.NewReader(strings.NewReader(string(body)))
-	csvReader.Comma = []rune(csvOptions.Comma)[0]
+	if len(csvOptions.Comma) > 0 {
+		csvReader.Comma = []rune(csvOptions.Comma)[0]
+	}
 	csvReader.FieldsPerRecord = -1
 
 	records, err := csvReader.ReadAll()
