@@ -5,6 +5,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"flag"
+	"log/slog"
 	"os"
 	"strings"
 
@@ -27,9 +28,19 @@ func main() {
 	flatPtr := flag.Bool("flat", false, "produce flat ods")
 	inputFilePtr := flag.String("input", "input.csv", "input csv file")
 	outputFilePtr := flag.String("output", "spreadsheet.ods", "output (flat-)ods file")
+	debugPtr := flag.Bool("debug", false, "output debug logs")
 
 	flag.Parse()
 
+	opts := &slog.HandlerOptions{}
+	if *debugPtr {
+		opts.Level = slog.LevelDebug
+	}
+
+	handler := slog.NewTextHandler(os.Stdout, opts)
+	logger := slog.New(handler)
+
+	logger.Debug(*inputFilePtr)
 	csvInputString, err := os.ReadFile(*inputFilePtr)
 	if err != nil {
 		flag.Usage()
@@ -40,7 +51,7 @@ func main() {
 
 	csvOptionsString, err := os.ReadFile(*inputFilePtr + ".options.json")
 	if err != nil {
-		println("no options file")
+		logger.Debug("no options file")
 	} else {
 		check(json.Unmarshal(csvOptionsString, &csvOptions))
 	}
