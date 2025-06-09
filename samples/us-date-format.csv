@@ -1,0 +1,6 @@
+"Invoice Number","Customer","Order Date (US)","Delivery Time (US)","Total Amount"
+INV-001,"Acme Corp.","05/15/2024","02:30 PM","$1250.75"
+INV-002,"Beta Solutions","05/16/2024","10:00 AM","$300.00"
+INV-003,"Gamma LLC","6/1/2024","3:45 PM","$50.20"
+INV-004,"Delta Enterprises","06/02/2024","09:15 AM","$899.50"
+INV-005,"Epsilon Inc.","7/3/2024","11:00 AM","$15.00"

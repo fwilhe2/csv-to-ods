@@ -1,0 +1,11 @@
+"SKU","Product Description","Available Stock","Unit Price","Comments"
+"PROD001","Laptop, 13 inch, i7, 16GB RAM","50",999.99,"Standard laptop"
+"PROD002","Desk Monitor 27"", 4K, IPS Panel","15",349.00,"High-resolution monitor"
+"PROD003","Wireless Headset (Noise Cancelling)","0",129.50,"Out of stock, expected in 2 weeks"
+"PROD004","External Hard Drive, 2TB","10",75.99,"Includes USB 3.0 cable."
+"PROD006","Office Supplies
+(Pens, Paper, Staples)",200,5.99,"Bundle includes multiple items.
+New line within this comment field."
+"PROD007",,"5",10.00,"Empty product description"
+,,"1",2.50,"Empty SKU and product description"
+"PROD008","Small widget",5,1.00,""

@@ -1,0 +1,16 @@
+Bank Name,Example Bank Inc.,,
+Statement Period,01/05/2024 - 31/05/2024,,
+Account Holder,John A. Doe,,
+Account Number,XXXX-XXXX-XXXX-5678,,
+Starting Balance,1500.25,,
+Ending Balance,2105.70,,
+
+"Date","Description","Category","Amount (EUR)","Reference"
+"2024-05-01","Initial Deposit","Income","1500.25",""
+"2024-05-02","Coffee Shop","Food & Drink","-4.50","TRX001"
+"2024-05-03","Online Store Purchase","Shopping","-78.99","ORD987"
+"2024-05-04","ATM Withdrawal","Cash","-100.00",""
+"2024-05-05","Salary Payment","Income","2000.00","PAY202405"
+"2024-05-06","Electricity Bill","Utilities","-65.30","BILL345"
+"2024-05-07","Restaurant Dinner","Food & Drink","-120.50","TRX002"
+"2024-05-08","Subscription Service","Entertainment","-9.99","SUB012"

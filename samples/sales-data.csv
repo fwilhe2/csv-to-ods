@@ -1,0 +1,7 @@
+"Order ID","Product Name","Category","Quantity","Price","Total Revenue","Order Date","Customer Name","Email"
+1001,"Laptop Pro 15","Electronics",1,1200.00,1200.00,"2024-01-05","Alice Wonderland","alice.w@example.com"
+1002,"Mechanical Keyboard","Electronics",2,85.50,171.00,"2024-01-05","Bob The Builder","bob.t@example.com"
+1003,"Wireless Mouse","Electronics",3,25.00,75.00,"2024-01-06","Charlie Chaplin","charlie.c@example.com"
+1004,"Ergonomic Chair","Office Furniture",1,350.00,350.00,"2024-01-07","Diana Prince","diana.p@example.com"
+1005,"USB-C Hub","Accessories",1,49.99,49.99,"2024-01-08","Eve Harrington","eve.h@example.com"
+1006,"External SSD 1TB","Storage",1,99.00,99.00,"2024-01-08","Frankenstein Jr.","frank.j@example.com"

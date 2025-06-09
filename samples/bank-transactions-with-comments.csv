@@ -1,0 +1,14 @@
+# Bank Statement Export
+# Account Holder: Jane Doe
+# Account Number: **** **** **** 1234
+# Export Date: 2024-06-07
+# Currency: EUR
+
+"Date","Transaction Type","Description","Amount","Balance"
+"2024-06-01","Debit","Groceries - SuperMart"," -55.20","1245.80"
+"2024-06-01","Credit","Salary Deposit"," 2500.00","3745.80"
+"2024-06-02","Debit","Online Subscription - Streaming Service"," -12.99","3732.81"
+"2024-06-03","Debit","Restaurant - Dinner with friends"," -80.00","3652.81"
+"2024-06-04","Credit","Refund - Online Purchase"," 25.00","3677.81"
+"2024-06-05","Debit","ATM Withdrawal"," -100.00","3577.81"
+"2024-06-06","Debit","Utility Bill - Electricity"," -78.50","3499.31"

@@ -29,3 +29,6 @@ jobs:
         run: go test -v ./...
 
       - run: make demo
+
+      - run: |
+          find samples -type f -name '*.fods' -exec cat {} \;

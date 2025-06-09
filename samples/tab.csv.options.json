@@ -1,0 +1,9 @@
+{
+    "headerLines": 1,
+    "comma": "\t",
+    "types": [
+        "string",
+        "float",
+        "string"
+    ]
+}
