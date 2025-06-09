@@ -1,0 +1,11 @@
+Date,Time,Merchant,Description,Amount,Currency
+2025-06-01,10:30,Bäcker Schmidt,"Einkauf von Brot und Brötchen",12.50,EUR
+2025-06-01,14:15,Kiosk Müller,"Zeitschrift, Süßigkeiten und Getränke",7.80,EUR
+2025-06-02,09:00,Supermarkt Klein,"Wocheneinkauf, Obst und Gemüse",45.20,EUR
+2025-06-02,18:45,Restaurant am See,"Abendessen mit Freunden, inklusive Getränke",62.90,EUR
+2025-06-03,11:20,Apotheke Herz,"Medikamente gegen Erkältung",18.75,EUR
+2025-06-03,16:00,Blumenladen Rose,"Blumenstrauß für Geburtstag",25.00,EUR
+2025-06-04,08:30,Café Sonnenschein,"Frühstück und Kaffee",9.50,EUR
+2025-06-04,13:55,Buchhandlung Traum,"Neues Buch, Science-Fiction Genre",22.30,EUR
+2025-06-05,10:00,Tiefgarage Stadtmitte,"Parkgebühr für 3 Stunden",6.00,EUR
+2025-06-05,17:10,Elektronikmarkt Welle,"Kopfhörer, kabellos",79.99,EUR

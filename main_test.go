@@ -25,6 +25,15 @@ func TestParseCsvSemicolon(t *testing.T) {
 	runTestParseCsv(t, "sample-semicolon", expected)
 }
 
+func TestParseCsvBankTransactions(t *testing.T) {
+	var expected [][]string
+	expected = append(expected, []string{"Date", "Time", "Merchant", "Description", "Amount", "Currency"})
+	expected = append(expected, []string{"2025-06-01", "10:30", "Bäcker Schmidt", "Einkauf von Brot und Brötchen", "12.50", "EUR"})
+	expected = append(expected, []string{"2025-06-01", "14:15", "Kiosk Müller", "Zeitschrift, Süßigkeiten und Getränke", "7.80", "EUR"})
+
+	runTestParseCsv(t, "bank-transactions", expected)
+}
+
 func runTestParseCsv(t *testing.T, testCase string, expected [][]string) {
 	csvInputString, err := os.ReadFile(fmt.Sprintf("test-files/%s.csv", testCase))
 	if err != nil {

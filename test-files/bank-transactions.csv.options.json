@@ -1,0 +1,12 @@
+{
+    "headerLines": 1,
+    "comma": ",",
+    "types": [
+        "date",
+        "time",
+        "string",
+        "string",
+        "currency",
+        "string"
+    ]
+}
