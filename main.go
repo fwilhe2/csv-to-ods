@@ -12,6 +12,8 @@ import (
 	rb "github.com/fwilhe2/rechenbrett"
 )
 
+var version = "dev"
+
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -29,8 +31,14 @@ func main() {
 	inputFilePtr := flag.String("input", "input.csv", "input csv file")
 	outputFilePtr := flag.String("output", "spreadsheet.ods", "output (flat-)ods file")
 	debugPtr := flag.Bool("debug", false, "output debug logs")
+	versionPtr := flag.Bool("version", false, "print version and exit")
 
 	flag.Parse()
+
+	if *versionPtr {
+		println("csv-to-ods", version)
+		os.Exit(0)
+	}
 
 	opts := &slog.HandlerOptions{}
 	if *debugPtr {

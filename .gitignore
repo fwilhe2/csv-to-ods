@@ -1,3 +1,5 @@
 csv-to-ods
 *ods
 *fods
+# Added by goreleaser init:
+dist/
