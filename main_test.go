@@ -30,6 +30,7 @@ func TestParseCsvBankTransactions(t *testing.T) {
 	expected = append(expected, []string{"Date", "Time", "Merchant", "Description", "Amount", "Currency"})
 	expected = append(expected, []string{"2025-06-01", "10:30", "Bäcker Schmidt", "Einkauf von Brot und Brötchen", "12.50", "EUR"})
 	expected = append(expected, []string{"2025-06-01", "14:15", "Kiosk Müller", "Zeitschrift, Süßigkeiten und Getränke", "7.80", "EUR"})
+	expected = append(expected, []string{"", "", "", "", "20,30", ""})
 
 	runTestParseCsv(t, "bank-transactions", expected)
 }

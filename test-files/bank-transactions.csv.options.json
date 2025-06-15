@@ -8,5 +8,8 @@
         "string",
         "currency",
         "string"
+    ],
+    "aggregates": [
+        "", "", "", "", "SUM", ""
     ]
 }
