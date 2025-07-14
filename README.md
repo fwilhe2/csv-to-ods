@@ -4,6 +4,8 @@ CLI tool to convert csv files into Open Document Spreadsheet files.
 
 Powered by [rechenbrett](https://github.com/fwilhe2/rechenbrett).
 
+Related: [json-to-ods](https://github.com/fwilhe2/json-to-ods)
+
 ## Why
 
 Many applications such as online banking only provide a csv export.
@@ -35,3 +37,20 @@ The format for the settings file is this:
     ]
 }
 ```
+
+Use the cli like in this example:
+
+```bash
+csv-to-ods -input input.csv -flat -output output.fods
+```
+
+This will produce an Open Document Spreadsheet file.
+
+If you omit the `flat` flag, a zipped Open Document Spreadsheet file will be created.
+Use the `.ods` file extension in that case.
+
+Check the [samples](./samples/) directory for more sample files.
+
+## License
+
+This software is written by Florian Wilhelm and available under the MIT license (see `LICENSE` for details)
