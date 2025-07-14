@@ -37,6 +37,9 @@ func main() {
 
 	if *versionPtr {
 		println("csv-to-ods", version)
+		println("https://github.com/fwilhe2/csv-to-ods")
+		println("Released under MIT License")
+		println("Copyright (c) 2025 Florian Wilhelm")
 		os.Exit(0)
 	}
 
